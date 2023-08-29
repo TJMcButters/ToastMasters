@@ -33,6 +33,7 @@ struct ContentView: View {
                 }
                 Section("Previous Sessions: ") {
                     Text("Placeholder Text")
+                    Text("More placeholder text")
                 }
             }
             .navigationTitle("Session")
