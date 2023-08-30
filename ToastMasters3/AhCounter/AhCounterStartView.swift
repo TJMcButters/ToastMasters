@@ -10,6 +10,7 @@ import SwiftUI
 struct AhCounterStartView: View {
     
     @ObservedObject var session: Session
+    @ObservedObject var nav: NavCon
     @State private var showingAddSpeaker: Bool = false
     
     var body: some View {
@@ -27,15 +28,26 @@ struct AhCounterStartView: View {
             }
             .navigationTitle("Select a speaker")
             .toolbar {
-                ToolbarItem(placement: .bottomBar) {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Spacer()
                     Button {
-                        showingAddSpeaker.toggle()
+                        nav.showingAddSpeakerView.toggle()
                     } label: {
                         Image(systemName: "person.badge.plus")
                     }
-                    .sheet(isPresented: $showingAddSpeaker) {
+                    .sheet(isPresented: $nav.showingAddSpeakerView) {
                         AddSpeakerView(session: session)
                     }
+                    Spacer()
+                    Button {
+                        nav.showingAhCounterSummary.toggle()
+                    } label: {
+                        Image(systemName: "rays")
+                    }
+                    .sheet(isPresented: $nav.showingAhCounterSummary) {
+                        AhCounterSummaryView(session: session)
+                    }
+                    Spacer()
                 }
             }
         }
@@ -43,6 +55,7 @@ struct AhCounterStartView: View {
 }
 
 #Preview("Ah Counter Start View") {
-    @ObservedObject var s = Session()
-    return AhCounterStartView(session: s)
+    @StateObject var s = Session()
+    @StateObject var n = NavCon()
+    return AhCounterStartView(session: s, nav: n)
 }

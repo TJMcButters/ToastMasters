@@ -24,4 +24,11 @@ import Foundation
         speakers.append(Speaker(name: n))
         return (false, "", "")
     }
+    
+    func addDummySpeakers() {
+        for i in 0...2 {
+            speakers.append(Speaker(name: "S\(i)"))
+        }
+    }
+    
 }

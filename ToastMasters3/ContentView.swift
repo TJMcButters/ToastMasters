@@ -10,13 +10,14 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var session = Session()
+    @StateObject var nav = NavCon()
     
     var body: some View {
         NavigationStack {
             Form {
                 Section("Pick your role: ") {
                     NavigationLink {
-                        AhCounterStartView(session: session)
+                        AhCounterStartView(session: session, nav: nav)
                     } label: {
                         Text("Ah Counter")
                     }
@@ -37,6 +38,26 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Session")
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Spacer()
+                    Button {
+                        nav.showingAddSpeakerView.toggle()
+                    } label: {
+                        Image(systemName: "person.badge.plus")
+                    }
+                    .sheet(isPresented: $nav.showingAddSpeakerView) {
+                        AddSpeakerView(session: session)
+                    }
+                    Spacer()
+                    Button {
+                        session.addDummySpeakers()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    Spacer()
+                }
+            }
         }
     }
     
