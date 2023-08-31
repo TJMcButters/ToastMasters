@@ -52,6 +52,7 @@ struct ContentView: View {
                     Spacer()
                     Button {
                         session.addDummySpeakers()
+                        session.addDummyWod()
                     } label: {
                         Image(systemName: "plus")
                     }

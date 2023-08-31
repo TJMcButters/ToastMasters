@@ -18,7 +18,7 @@ struct GrammarianStartView: View {
                 Section("Current Speakers: ") {
                     ForEach(session.speakers) { speaker in
                         NavigationLink {
-                            Text("Speaker Edit View")
+                            GrammarianSpeakerEditView(session: session, nav: nav, currentSpeaker: speaker)
                         } label: {
                             Text(speaker.name)
                         }
