@@ -16,6 +16,7 @@
 		18054AD32A9E1ED50039B582 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AD22A9E1ED50039B582 /* NavigationController.swift */; };
 		18054AD52A9ECF400039B582 /* AhCounterSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AD42A9ECF400039B582 /* AhCounterSummaryView.swift */; };
 		18054AD72AA0585F0039B582 /* CustomViewInserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AD62AA0585F0039B582 /* CustomViewInserts.swift */; };
+		1881564C2AA1558000DC464B /* GrammarianStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881564B2AA1558000DC464B /* GrammarianStartView.swift */; };
 		188380692A9AE8A3002D9BC2 /* ToastMasters3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188380682A9AE8A3002D9BC2 /* ToastMasters3App.swift */; };
 		1883806B2A9AE8A3002D9BC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883806A2A9AE8A3002D9BC2 /* ContentView.swift */; };
 		1883806D2A9AE8A8002D9BC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1883806C2A9AE8A8002D9BC2 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		18054AD22A9E1ED50039B582 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		18054AD42A9ECF400039B582 /* AhCounterSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhCounterSummaryView.swift; sourceTree = "<group>"; };
 		18054AD62AA0585F0039B582 /* CustomViewInserts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewInserts.swift; sourceTree = "<group>"; };
+		1881564B2AA1558000DC464B /* GrammarianStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarianStartView.swift; sourceTree = "<group>"; };
 		188380652A9AE8A3002D9BC2 /* ToastMasters3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToastMasters3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188380682A9AE8A3002D9BC2 /* ToastMasters3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMasters3App.swift; sourceTree = "<group>"; };
 		1883806A2A9AE8A3002D9BC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 		18054AC62A9CD9C70039B582 /* AhCounter */ = {
 			isa = PBXGroup;
 			children = (
+				18054AC22A9C40D10039B582 /* AhCounterView.swift */,
 				18054AC72A9CD9E60039B582 /* AhCounterStartView.swift */,
 				18054ACF2A9D93A00039B582 /* AhCounterSpeakerEditView.swift */,
 				18054AD42A9ECF400039B582 /* AhCounterSummaryView.swift */,
@@ -77,6 +80,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		1881564A2AA1555A00DC464B /* Grammarian */ = {
+			isa = PBXGroup;
+			children = (
+				1881564B2AA1558000DC464B /* GrammarianStartView.swift */,
+			);
+			path = Grammarian;
+			sourceTree = "<group>";
+		};
 		1883805C2A9AE8A3002D9BC2 = {
 			isa = PBXGroup;
 			children = (
@@ -96,13 +107,13 @@
 		188380672A9AE8A3002D9BC2 /* ToastMasters3 */ = {
 			isa = PBXGroup;
 			children = (
+				1883806A2A9AE8A3002D9BC2 /* ContentView.swift */,
+				188380682A9AE8A3002D9BC2 /* ToastMasters3App.swift */,
+				18054AC62A9CD9C70039B582 /* AhCounter */,
+				1881564A2AA1555A00DC464B /* Grammarian */,
 				18054AD12A9E1EC30039B582 /* Controllers */,
 				18054ACC2A9D71AE0039B582 /* General Views */,
 				1883807A2A9AEB82002D9BC2 /* DataModels */,
-				18054AC62A9CD9C70039B582 /* AhCounter */,
-				188380682A9AE8A3002D9BC2 /* ToastMasters3App.swift */,
-				1883806A2A9AE8A3002D9BC2 /* ContentView.swift */,
-				18054AC22A9C40D10039B582 /* AhCounterView.swift */,
 				1883806C2A9AE8A8002D9BC2 /* Assets.xcassets */,
 				1883806E2A9AE8A8002D9BC2 /* Preview Content */,
 			);
@@ -204,6 +215,7 @@
 				18054AD52A9ECF400039B582 /* AhCounterSummaryView.swift in Sources */,
 				18054AD72AA0585F0039B582 /* CustomViewInserts.swift in Sources */,
 				18054ACE2A9D71BB0039B582 /* AddSpeakerView.swift in Sources */,
+				1881564C2AA1558000DC464B /* GrammarianStartView.swift in Sources */,
 				18054AC12A9C3EBF0039B582 /* SpeakerModel.swift in Sources */,
 				18054AD02A9D93A00039B582 /* AhCounterSpeakerEditView.swift in Sources */,
 				18054AC52A9CD9410039B582 /* SessionModel.swift in Sources */,

@@ -22,7 +22,7 @@ struct ContentView: View {
                         Text("Ah Counter")
                     }
                     NavigationLink {
-                        Text("Grammarian View")
+                        GrammarianStartView(session: session, nav: nav)
                     } label: {
                         Text("Grammarian")
                     }
