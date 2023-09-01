@@ -1,5 +1,0 @@
-Greetings Toastmaster, fellow Toastmasters, and honored guests.
-
-As Timer, I will keep track of time for each prepared speech, all Table Topics Speakers, and the speech Evaluators.
-
-I will also alert each speaker of the time they have left, using the green, yellow, and red indications, which denote specific times remaining
