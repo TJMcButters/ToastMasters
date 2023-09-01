@@ -29,7 +29,14 @@ struct AhCounterStartView: View {
             .navigationTitle("Select a speaker")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
-                    // TODO: Add a script view button
+                    Button {
+                        nav.showingAhCounterScript.toggle()
+                    } label: {
+                        Image(systemName: "applescript")
+                    }
+                    .sheet(isPresented: $nav.showingAhCounterScript) {
+                        AhCounterScriptView(session: session, nav: nav)
+                    }
                     Spacer()
                     Button {
                         nav.showingAddSpeakerView.toggle()
