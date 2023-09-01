@@ -17,6 +17,14 @@ final class Speaker: Identifiable, ObservableObject {
         self.name = name
     }
     
+    func addRemark(remark r: String) -> (Bool, String, String) {
+        if r.isEmpty {
+            return (true, "Empty Remark", "Your remark must contain text")
+        }
+        gRemarks.remarks.append(r)
+        return (false, "", "")
+    }
+    
 }
 
 struct AhCountables {

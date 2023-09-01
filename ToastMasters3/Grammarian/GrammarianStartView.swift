@@ -28,6 +28,7 @@ struct GrammarianStartView: View {
             .navigationTitle("Select a speaker")
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
+                    // TODO: Add a script view button
                     Button {
                         nav.showingAddSpeakerView.toggle()
                     } label: {

@@ -29,6 +29,7 @@ struct AhCounterStartView: View {
             .navigationTitle("Select a speaker")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
+                    // TODO: Add a script view button
                     Spacer()
                     Button {
                         nav.showingAddSpeakerView.toggle()
