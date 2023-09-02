@@ -15,19 +15,11 @@ struct GrammarianStartView: View {
     var body: some View {
         NavigationStack {
             Form {
-                VStack {
-                    if session.wod.word == "" {
-                        HStack {
-                            Text("Add a word of the day!")
-                            // TODO: Need to figure out how to show this view conditionally
-//                            Button {
-//                                nav.showingAddWodView.toggle()
-//                            } label: {
-//                                Image(systemName: "plus")
-//                            }
-                        }
-                    }
-                }
+                
+                TextField(session.wod.word, text: $session.wod.word, prompt: Text("Add a Word of the day"))
+                TextField(session.wod.definition, text: $session.wod.definition, prompt: Text("Add a definition"))
+                TextField(session.wod.example, text: $session.wod.example, prompt: Text("Add an example"))
+                
                 Section("Current Speakers: ") {
                     ForEach(session.speakers) { speaker in
                         NavigationLink {

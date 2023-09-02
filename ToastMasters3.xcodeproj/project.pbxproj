@@ -27,6 +27,7 @@
 		1883806B2A9AE8A3002D9BC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883806A2A9AE8A3002D9BC2 /* ContentView.swift */; };
 		1883806D2A9AE8A8002D9BC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1883806C2A9AE8A8002D9BC2 /* Assets.xcassets */; };
 		188380702A9AE8A8002D9BC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1883806F2A9AE8A8002D9BC2 /* Preview Assets.xcassets */; };
+		18BCF8D82AA2F2640044560A /* AddWodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCF8D72AA2F2640044560A /* AddWodView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		1883806A2A9AE8A3002D9BC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1883806C2A9AE8A8002D9BC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1883806F2A9AE8A8002D9BC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18BCF8D72AA2F2640044560A /* AddWodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWodView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				18054ACD2A9D71BB0039B582 /* AddSpeakerView.swift */,
 				18054AD62AA0585F0039B582 /* CustomViewInserts.swift */,
+				18BCF8D72AA2F2640044560A /* AddWodView.swift */,
 			);
 			path = "General Views";
 			sourceTree = "<group>";
@@ -157,8 +160,8 @@
 		1883807A2A9AEB82002D9BC2 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
-				18054AC02A9C3EBF0039B582 /* SpeakerModel.swift */,
 				18054AC42A9CD9410039B582 /* SessionModel.swift */,
+				18054AC02A9C3EBF0039B582 /* SpeakerModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				18054ACE2A9D71BB0039B582 /* AddSpeakerView.swift in Sources */,
 				1881564C2AA1558000DC464B /* GrammarianStartView.swift in Sources */,
 				18054AC12A9C3EBF0039B582 /* SpeakerModel.swift in Sources */,
+				18BCF8D82AA2F2640044560A /* AddWodView.swift in Sources */,
 				188156582AA1792900DC464B /* AhCounterScriptView.swift in Sources */,
 				1881564E2AA15D5400DC464B /* GrammarianSpeakerEditView.swift in Sources */,
 				1881565C2AA17E9700DC464B /* GrammarianScriptView.swift in Sources */,
