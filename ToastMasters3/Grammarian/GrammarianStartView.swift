@@ -52,7 +52,15 @@ struct GrammarianStartView: View {
                         AddSpeakerView(session: session)
                     }
                     Spacer()
-                    //TODO: Add a Results view
+                    Button {
+                        nav.showingGrammarianSummary.toggle()
+                    } label: {
+                        Image(systemName: "rays")
+                    }
+                    .sheet(isPresented: $nav.showingGrammarianSummary) {
+                        GrammarianSummaryView(session: session, nav: nav, currentSpeaker: session.speakers[0])
+                    }
+                    Spacer()
                 }
             }
         }

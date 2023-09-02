@@ -33,7 +33,7 @@ import Foundation
     }
     
     func addDummySpeakers() {
-        for i in 0...2 {
+        for i in 0...10 {
             speakers.append(Speaker(name: "S\(i)"))
         }
     }

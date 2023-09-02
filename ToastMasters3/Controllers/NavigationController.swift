@@ -15,6 +15,7 @@ final class NavCon: ObservableObject {
     
     // Summary views
     @Published var showingAhCounterSummary: Bool = false
+    @Published var showingGrammarianSummary: Bool = false
 
     // Script views
     @Published var showingAhCounterScript: Bool = false
