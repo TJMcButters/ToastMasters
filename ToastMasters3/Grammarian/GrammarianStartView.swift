@@ -19,6 +19,9 @@ struct GrammarianStartView: View {
                 TextField(session.wod.word, text: $session.wod.word, prompt: Text("Add a Word of the day"))
                 TextField(session.wod.definition, text: $session.wod.definition, prompt: Text("Add a definition"))
                 TextField(session.wod.example, text: $session.wod.example, prompt: Text("Add an example"))
+                Button("Feeling Lucky?") {
+                    // TODO: Insert API call here
+                }
                 
                 Section("Current Speakers: ") {
                     ForEach(session.speakers) { speaker in

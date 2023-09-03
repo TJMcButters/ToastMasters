@@ -13,55 +13,64 @@ struct ContentView: View {
     @StateObject var nav = NavCon()
     
     var body: some View {
-        NavigationStack {
-            Form {
-                Section("Pick your role: ") {
-                    NavigationLink {
-                        AhCounterStartView(session: session, nav: nav)
-                    } label: {
-                        Text("Ah Counter")
+        VStack {
+            Image("ToastMastersLogo")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 90)
+            Text("What's speaking to you today?")
+                .font(.caption.bold())
+            
+            NavigationStack {
+                Form {
+                    Section("Pick your role: ") {
+                        NavigationLink {
+                            AhCounterStartView(session: session, nav: nav)
+                        } label: {
+                            Text("Ah Counter")
+                        }
+                        NavigationLink {
+                            GrammarianStartView(session: session, nav: nav)
+                        } label: {
+                            Text("Grammarian")
+                        }
+                        NavigationLink {
+                            Text("Timer View")
+                        } label: {
+                            Text("Timer")
+                        }
                     }
-                    NavigationLink {
-                        GrammarianStartView(session: session, nav: nav)
-                    } label: {
-                        Text("Grammarian")
-                    }
-                    NavigationLink {
-                        Text("Timer View")
-                    } label: {
-                        Text("Timer")
+                    Section("Previous Sessions: ") {
+                        Text("Placeholder Text")
+                        Text("More placeholder text")
                     }
                 }
-                Section("Previous Sessions: ") {
-                    Text("Placeholder Text")
-                    Text("More placeholder text")
-                }
-            }
-            .navigationTitle("Session")
-            .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
-                    Spacer()
-                    Button {
-                        nav.showingAddSpeakerView.toggle()
-                    } label: {
-                        Image(systemName: "person.badge.plus")
+                .navigationTitle("Session")
+                .toolbar {
+                    ToolbarItemGroup(placement: .bottomBar) {
+                        Spacer()
+                        Button {
+                            nav.showingAddSpeakerView.toggle()
+                        } label: {
+                            Image(systemName: "person.badge.plus")
+                        }
+                        .sheet(isPresented: $nav.showingAddSpeakerView) {
+                            AddSpeakerView(session: session)
+                        }
+                        Spacer()
+                        Button {
+                            session.addDummySpeakers()
+                            session.addDummyWod()
+                        } label: {
+                            Image(systemName: "plus")
+                        }
+                        Spacer()
                     }
-                    .sheet(isPresented: $nav.showingAddSpeakerView) {
-                        AddSpeakerView(session: session)
-                    }
-                    Spacer()
-                    Button {
-                        session.addDummySpeakers()
-                        session.addDummyWod()
-                    } label: {
-                        Image(systemName: "plus")
-                    }
-                    Spacer()
                 }
             }
         }
+        .background(Color.mint)
     }
-    
 }
 
 #Preview {

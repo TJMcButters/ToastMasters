@@ -22,10 +22,18 @@ struct GrammarianSummaryView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHGrid(rows: layout) {
                     ForEach(session.speakers) { speaker in
-                        Button(speaker.name) {
-                            currentSpeaker = speaker
+                        if speaker.name == currentSpeaker.name {
+                            Button(speaker.name) {
+                                currentSpeaker = speaker
+                            }
+                            .buttonStyle(.borderedProminent)
                         }
-                        .buttonStyle(.bordered)
+                        else {
+                            Button(speaker.name) {
+                                currentSpeaker = speaker
+                            }
+                            .buttonStyle(.bordered)
+                        }
                     }
                 }
             }
