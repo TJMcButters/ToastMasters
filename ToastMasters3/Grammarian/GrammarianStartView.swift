@@ -5,22 +5,35 @@
 //  Created by Tyler Moncur on 8/31/23.
 //
 
+// let results = apiHandler.fetchAPI(word: "Voracious")
+
 import SwiftUI
 
 struct GrammarianStartView: View {
     
     @ObservedObject var session: Session
     @ObservedObject var nav: NavCon
+    @StateObject var apiHandler = APIHandler()
+    @State var myWord: String = ""
     
     var body: some View {
         NavigationStack {
             Form {
-                
+                Text("\(myWord)")
                 TextField(session.wod.word, text: $session.wod.word, prompt: Text("Add a Word of the day"))
                 TextField(session.wod.definition, text: $session.wod.definition, prompt: Text("Add a definition"))
                 TextField(session.wod.example, text: $session.wod.example, prompt: Text("Add an example"))
                 Button("Feeling Lucky?") {
-                    // TODO: Insert API call here
+                    let results = apiHandler.fetchFeelingLuckyAPI()
+                    session.wod.word = results.0
+                    session.wod.definition = results.1
+                    session.wod.example = results.2
+                }
+                Button("Search") {
+                    nav.showingWordSearch.toggle()
+                }
+                .sheet(isPresented: $nav.showingFeelingLucky) {
+                    FeelingLuckyView(session: session, nav: nav)
                 }
                 
                 Section("Current Speakers: ") {

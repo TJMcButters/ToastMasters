@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180297382AA51AF1000A069C /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180297372AA51AF1000A069C /* APIHandler.swift */; };
+		1802973A2AA55C77000A069C /* FeelingLuckyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180297392AA55C77000A069C /* FeelingLuckyView.swift */; };
+		1802973C2AA57E93000A069C /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1802973B2AA57E93000A069C /* words.txt */; };
 		18054AC12A9C3EBF0039B582 /* SpeakerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AC02A9C3EBF0039B582 /* SpeakerModel.swift */; };
 		18054AC52A9CD9410039B582 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AC42A9CD9410039B582 /* SessionModel.swift */; };
 		18054AC82A9CD9E60039B582 /* AhCounterStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AC72A9CD9E60039B582 /* AhCounterStartView.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180297372AA51AF1000A069C /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		180297392AA55C77000A069C /* FeelingLuckyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingLuckyView.swift; sourceTree = "<group>"; };
+		1802973B2AA57E93000A069C /* words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		18054AC02A9C3EBF0039B582 /* SpeakerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerModel.swift; sourceTree = "<group>"; };
 		18054AC42A9CD9410039B582 /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		18054AC72A9CD9E60039B582 /* AhCounterStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhCounterStartView.swift; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 				18054ACD2A9D71BB0039B582 /* AddSpeakerView.swift */,
 				18054AD62AA0585F0039B582 /* CustomViewInserts.swift */,
 				18BCF8D72AA2F2640044560A /* AddWodView.swift */,
+				180297392AA55C77000A069C /* FeelingLuckyView.swift */,
 			);
 			path = "General Views";
 			sourceTree = "<group>";
@@ -94,6 +101,7 @@
 			children = (
 				18054AD22A9E1ED50039B582 /* NavigationController.swift */,
 				188156592AA179A800DC464B /* ScriptLoader.swift */,
+				180297372AA51AF1000A069C /* APIHandler.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -109,14 +117,15 @@
 			path = Grammarian;
 			sourceTree = "<group>";
 		};
-		1881564F2AA1771100DC464B /* Scripts */ = {
+		1881564F2AA1771100DC464B /* DataBanks */ = {
 			isa = PBXGroup;
 			children = (
 				188156512AA1775700DC464B /* AhCounter.txt */,
 				188156532AA177B000DC464B /* Grammarian.txt */,
 				188156552AA1783A00DC464B /* Timer.txt */,
+				1802973B2AA57E93000A069C /* words.txt */,
 			);
-			path = Scripts;
+			path = DataBanks;
 			sourceTree = "<group>";
 		};
 		1883805C2A9AE8A3002D9BC2 = {
@@ -145,7 +154,7 @@
 				18054AD12A9E1EC30039B582 /* Controllers */,
 				18054ACC2A9D71AE0039B582 /* General Views */,
 				1883807A2A9AEB82002D9BC2 /* DataModels */,
-				1881564F2AA1771100DC464B /* Scripts */,
+				1881564F2AA1771100DC464B /* DataBanks */,
 				1883806C2A9AE8A8002D9BC2 /* Assets.xcassets */,
 				1883806E2A9AE8A8002D9BC2 /* Preview Content */,
 			);
@@ -231,6 +240,7 @@
 				1883806D2A9AE8A8002D9BC2 /* Assets.xcassets in Resources */,
 				188156562AA1783A00DC464B /* Timer.txt in Resources */,
 				188156522AA1775700DC464B /* AhCounter.txt in Resources */,
+				1802973C2AA57E93000A069C /* words.txt in Resources */,
 				188156542AA177B000DC464B /* Grammarian.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1883806B2A9AE8A3002D9BC2 /* ContentView.swift in Sources */,
+				1802973A2AA55C77000A069C /* FeelingLuckyView.swift in Sources */,
 				188380692A9AE8A3002D9BC2 /* ToastMasters3App.swift in Sources */,
 				18054AC82A9CD9E60039B582 /* AhCounterStartView.swift in Sources */,
 				18054AD32A9E1ED50039B582 /* NavigationController.swift in Sources */,
@@ -257,6 +268,7 @@
 				1881564E2AA15D5400DC464B /* GrammarianSpeakerEditView.swift in Sources */,
 				1881565C2AA17E9700DC464B /* GrammarianScriptView.swift in Sources */,
 				1881565A2AA179A800DC464B /* ScriptLoader.swift in Sources */,
+				180297382AA51AF1000A069C /* APIHandler.swift in Sources */,
 				18054AD02A9D93A00039B582 /* AhCounterSpeakerEditView.swift in Sources */,
 				18054AC52A9CD9410039B582 /* SessionModel.swift in Sources */,
 			);
