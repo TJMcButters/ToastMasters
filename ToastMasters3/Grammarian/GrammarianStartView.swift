@@ -15,6 +15,8 @@ struct GrammarianStartView: View {
     @ObservedObject var nav: NavCon
     @StateObject var apiHandler = APIHandler()
     @State var myWord: String = ""
+    @State var myDictionaryWord: DictionaryWord?
+    @State var myWodData: WodData?
     
     var body: some View {
         NavigationStack {
@@ -24,10 +26,12 @@ struct GrammarianStartView: View {
                 TextField(session.wod.definition, text: $session.wod.definition, prompt: Text("Add a definition"))
                 TextField(session.wod.example, text: $session.wod.example, prompt: Text("Add an example"))
                 Button("Feeling Lucky?") {
-                    let results = apiHandler.fetchFeelingLuckyAPI()
-                    session.wod.word = results.0
-                    session.wod.definition = results.1
-                    session.wod.example = results.2
+                    let word = apiHandler.getRandomWord()
+                    Task {
+                        myDictionaryWord = try await apiHandler.getDictionaryWordData(word: word)
+                    }
+                    let wd = WodData(word: myDictionaryWord?.word ?? "", definition: myDictionaryWord?.meanings[0].definitions[0].definition ?? "", example: myDictionaryWord?.meanings[0].definitions[0].example ?? "")
+                    session.updateWodFromWodData(wodd: wd)
                 }
                 Button("Search") {
                     nav.showingWordSearch.toggle()

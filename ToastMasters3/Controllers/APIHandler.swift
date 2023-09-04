@@ -8,28 +8,31 @@
 import Foundation
 
 class APIHandler: ObservableObject {
-    let feelingLucky = "https://api.dictionaryapi.dev/api/v2/entries/en/"
     var allWords: [String] = []
     
-    func fetchFeelingLuckyAPI() -> (String, String, String) {
-        let searchURL = feelingLucky + getRandomWord()
-        var word: String = ""
-        var def: String = ""
-        var example: String = ""
-        print("Search URL: \(searchURL)")
-        let url = URL(string: searchURL)
-        URLSession.shared.dataTask(with: url!) { data, response, error in
-            if let data = data {
-                if let decoded = try? JSONDecoder().decode(DictionaryWord.self, from: data) {
-                    word = decoded.word
-                    def = decoded.meanings[0].definitions[0].definition
-                    example = decoded.meanings[0].definitions[0].example
-                }
-            }
-        }
-        .resume()
+    func getDictionaryWordData(word w: String) async throws -> DictionaryWord {
+        let endpoint = "https://api.dictionaryapi.dev/api/v2/entries/en/\(w)"
         
-        return (word, def, example)
+        guard let url = URL(string: endpoint) else {
+            throw DictionaryError.invalidURL
+        }
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw DictionaryError.invalidResponse
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            return try decoder.decode(DictionaryWord.self, from: data)
+        } catch {
+            throw DictionaryError.invalidData
+        }
+    }
+    
+    func convertToWod(dictWord dw: DictionaryWord) -> WodData {
+        return WodData(word: dw.word, definition: dw.meanings[0].definitions[0].definition, example: dw.meanings[0].definitions[0].example)
     }
     
     func findAllWords() -> [String] {
@@ -55,6 +58,12 @@ class APIHandler: ObservableObject {
     
 }
 
+struct WodData: Codable {
+    var word: String
+    var definition: String
+    var example: String
+}
+
 struct DictionaryWord: Codable {
     let word, phonetic: String
     let phonetics: [Phonetic]
@@ -75,4 +84,10 @@ struct Definition: Codable {
 struct Phonetic: Codable {
     let text: String
     let audio: String?
+}
+
+enum DictionaryError: Error {
+    case invalidURL
+    case invalidResponse
+    case invalidData
 }

@@ -32,6 +32,12 @@ import Foundation
         wod.example = e
     }
     
+    func updateWodFromWodData(wodd wd: WodData) {
+        wod.word = wd.word
+        wod.definition = wd.definition
+        wod.example = wd.example
+    }
+    
     func addDummySpeakers() {
         for i in 0...10 {
             speakers.append(Speaker(name: "S\(i)"))
