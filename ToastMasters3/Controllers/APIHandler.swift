@@ -10,22 +10,33 @@ import Foundation
 class APIHandler: ObservableObject {
     var allWords: [String] = []
     
+    func getWodData() async -> WodData {
+        let word = getRandomWord()
+        let result = Task(priority: .high) {
+            try? await getDictionaryWordData(word: word)
+        }
+        let dw = await result.value
+        let returnWod = WodData(word: dw?.word ?? "asdf", definition: dw?.meanings[0].definitions[0].definition ?? "asdf", example: dw?.meanings[0].definitions[0].example ?? "asdf")
+        return returnWod
+    }
+    
     func getDictionaryWordData(word w: String) async throws -> DictionaryWord {
         let endpoint = "https://api.dictionaryapi.dev/api/v2/entries/en/\(w)"
-        
         guard let url = URL(string: endpoint) else {
             throw DictionaryError.invalidURL
         }
-        
+
         let (data, response) = try await URLSession.shared.data(from: url)
         
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
             throw DictionaryError.invalidResponse
         }
-        
+
         do {
             let decoder = JSONDecoder()
-            return try decoder.decode(DictionaryWord.self, from: data)
+            let returnWord = try decoder.decode(DictionaryWord.self, from: data)
+            print(returnWord)
+            return returnWord
         } catch {
             throw DictionaryError.invalidData
         }

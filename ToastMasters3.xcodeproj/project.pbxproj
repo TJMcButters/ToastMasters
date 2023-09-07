@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180297382AA51AF1000A069C /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180297372AA51AF1000A069C /* APIHandler.swift */; };
-		1802973A2AA55C77000A069C /* FeelingLuckyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180297392AA55C77000A069C /* FeelingLuckyView.swift */; };
-		1802973C2AA57E93000A069C /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1802973B2AA57E93000A069C /* words.txt */; };
 		18054AC12A9C3EBF0039B582 /* SpeakerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AC02A9C3EBF0039B582 /* SpeakerModel.swift */; };
 		18054AC52A9CD9410039B582 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AC42A9CD9410039B582 /* SessionModel.swift */; };
 		18054AC82A9CD9E60039B582 /* AhCounterStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AC72A9CD9E60039B582 /* AhCounterStartView.swift */; };
@@ -18,10 +15,11 @@
 		18054AD32A9E1ED50039B582 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AD22A9E1ED50039B582 /* NavigationController.swift */; };
 		18054AD52A9ECF400039B582 /* AhCounterSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AD42A9ECF400039B582 /* AhCounterSummaryView.swift */; };
 		18054AD72AA0585F0039B582 /* CustomViewInserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AD62AA0585F0039B582 /* CustomViewInserts.swift */; };
+		184D49562AA954FB000861B7 /* WODGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D49552AA954FB000861B7 /* WODGenerator.swift */; };
+		184D49582AA95537000861B7 /* Words.json in Resources */ = {isa = PBXBuildFile; fileRef = 184D49572AA95537000861B7 /* Words.json */; };
 		1881564C2AA1558000DC464B /* GrammarianStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881564B2AA1558000DC464B /* GrammarianStartView.swift */; };
 		1881564E2AA15D5400DC464B /* GrammarianSpeakerEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881564D2AA15D5400DC464B /* GrammarianSpeakerEditView.swift */; };
 		188156522AA1775700DC464B /* AhCounter.txt in Resources */ = {isa = PBXBuildFile; fileRef = 188156512AA1775700DC464B /* AhCounter.txt */; };
-		188156542AA177B000DC464B /* Grammarian.txt in Resources */ = {isa = PBXBuildFile; fileRef = 188156532AA177B000DC464B /* Grammarian.txt */; };
 		188156562AA1783A00DC464B /* Timer.txt in Resources */ = {isa = PBXBuildFile; fileRef = 188156552AA1783A00DC464B /* Timer.txt */; };
 		188156582AA1792900DC464B /* AhCounterScriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188156572AA1792900DC464B /* AhCounterScriptView.swift */; };
 		1881565A2AA179A800DC464B /* ScriptLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188156592AA179A800DC464B /* ScriptLoader.swift */; };
@@ -30,14 +28,10 @@
 		1883806B2A9AE8A3002D9BC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883806A2A9AE8A3002D9BC2 /* ContentView.swift */; };
 		1883806D2A9AE8A8002D9BC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1883806C2A9AE8A8002D9BC2 /* Assets.xcassets */; };
 		188380702A9AE8A8002D9BC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1883806F2A9AE8A8002D9BC2 /* Preview Assets.xcassets */; };
-		18BCF8D82AA2F2640044560A /* AddWodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCF8D72AA2F2640044560A /* AddWodView.swift */; };
 		18BCF8DA2AA2FCE60044560A /* GrammarianSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCF8D92AA2FCE60044560A /* GrammarianSummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		180297372AA51AF1000A069C /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
-		180297392AA55C77000A069C /* FeelingLuckyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingLuckyView.swift; sourceTree = "<group>"; };
-		1802973B2AA57E93000A069C /* words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		18054AC02A9C3EBF0039B582 /* SpeakerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerModel.swift; sourceTree = "<group>"; };
 		18054AC42A9CD9410039B582 /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		18054AC72A9CD9E60039B582 /* AhCounterStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhCounterStartView.swift; sourceTree = "<group>"; };
@@ -46,10 +40,11 @@
 		18054AD22A9E1ED50039B582 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		18054AD42A9ECF400039B582 /* AhCounterSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhCounterSummaryView.swift; sourceTree = "<group>"; };
 		18054AD62AA0585F0039B582 /* CustomViewInserts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewInserts.swift; sourceTree = "<group>"; };
+		184D49552AA954FB000861B7 /* WODGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WODGenerator.swift; sourceTree = "<group>"; };
+		184D49572AA95537000861B7 /* Words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Words.json; sourceTree = "<group>"; };
 		1881564B2AA1558000DC464B /* GrammarianStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarianStartView.swift; sourceTree = "<group>"; };
 		1881564D2AA15D5400DC464B /* GrammarianSpeakerEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarianSpeakerEditView.swift; sourceTree = "<group>"; };
 		188156512AA1775700DC464B /* AhCounter.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AhCounter.txt; sourceTree = "<group>"; };
-		188156532AA177B000DC464B /* Grammarian.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Grammarian.txt; sourceTree = "<group>"; };
 		188156552AA1783A00DC464B /* Timer.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Timer.txt; sourceTree = "<group>"; };
 		188156572AA1792900DC464B /* AhCounterScriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhCounterScriptView.swift; sourceTree = "<group>"; };
 		188156592AA179A800DC464B /* ScriptLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptLoader.swift; sourceTree = "<group>"; };
@@ -59,7 +54,6 @@
 		1883806A2A9AE8A3002D9BC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1883806C2A9AE8A8002D9BC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1883806F2A9AE8A8002D9BC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		18BCF8D72AA2F2640044560A /* AddWodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWodView.swift; sourceTree = "<group>"; };
 		18BCF8D92AA2FCE60044560A /* GrammarianSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarianSummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,8 +84,6 @@
 			children = (
 				18054ACD2A9D71BB0039B582 /* AddSpeakerView.swift */,
 				18054AD62AA0585F0039B582 /* CustomViewInserts.swift */,
-				18BCF8D72AA2F2640044560A /* AddWodView.swift */,
-				180297392AA55C77000A069C /* FeelingLuckyView.swift */,
 			);
 			path = "General Views";
 			sourceTree = "<group>";
@@ -101,7 +93,7 @@
 			children = (
 				18054AD22A9E1ED50039B582 /* NavigationController.swift */,
 				188156592AA179A800DC464B /* ScriptLoader.swift */,
-				180297372AA51AF1000A069C /* APIHandler.swift */,
+				184D49552AA954FB000861B7 /* WODGenerator.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,9 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				188156512AA1775700DC464B /* AhCounter.txt */,
-				188156532AA177B000DC464B /* Grammarian.txt */,
 				188156552AA1783A00DC464B /* Timer.txt */,
-				1802973B2AA57E93000A069C /* words.txt */,
+				184D49572AA95537000861B7 /* Words.json */,
 			);
 			path = DataBanks;
 			sourceTree = "<group>";
@@ -239,9 +230,8 @@
 				188380702A9AE8A8002D9BC2 /* Preview Assets.xcassets in Resources */,
 				1883806D2A9AE8A8002D9BC2 /* Assets.xcassets in Resources */,
 				188156562AA1783A00DC464B /* Timer.txt in Resources */,
+				184D49582AA95537000861B7 /* Words.json in Resources */,
 				188156522AA1775700DC464B /* AhCounter.txt in Resources */,
-				1802973C2AA57E93000A069C /* words.txt in Resources */,
-				188156542AA177B000DC464B /* Grammarian.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1883806B2A9AE8A3002D9BC2 /* ContentView.swift in Sources */,
-				1802973A2AA55C77000A069C /* FeelingLuckyView.swift in Sources */,
 				188380692A9AE8A3002D9BC2 /* ToastMasters3App.swift in Sources */,
 				18054AC82A9CD9E60039B582 /* AhCounterStartView.swift in Sources */,
 				18054AD32A9E1ED50039B582 /* NavigationController.swift in Sources */,
@@ -262,13 +251,12 @@
 				18054ACE2A9D71BB0039B582 /* AddSpeakerView.swift in Sources */,
 				1881564C2AA1558000DC464B /* GrammarianStartView.swift in Sources */,
 				18054AC12A9C3EBF0039B582 /* SpeakerModel.swift in Sources */,
-				18BCF8D82AA2F2640044560A /* AddWodView.swift in Sources */,
 				18BCF8DA2AA2FCE60044560A /* GrammarianSummaryView.swift in Sources */,
 				188156582AA1792900DC464B /* AhCounterScriptView.swift in Sources */,
+				184D49562AA954FB000861B7 /* WODGenerator.swift in Sources */,
 				1881564E2AA15D5400DC464B /* GrammarianSpeakerEditView.swift in Sources */,
 				1881565C2AA17E9700DC464B /* GrammarianScriptView.swift in Sources */,
 				1881565A2AA179A800DC464B /* ScriptLoader.swift in Sources */,
-				180297382AA51AF1000A069C /* APIHandler.swift in Sources */,
 				18054AD02A9D93A00039B582 /* AhCounterSpeakerEditView.swift in Sources */,
 				18054AC52A9CD9410039B582 /* SessionModel.swift in Sources */,
 			);

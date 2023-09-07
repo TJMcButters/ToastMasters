@@ -13,31 +13,18 @@ struct GrammarianStartView: View {
     
     @ObservedObject var session: Session
     @ObservedObject var nav: NavCon
-    @StateObject var apiHandler = APIHandler()
-    @State var myWord: String = ""
-    @State var myDictionaryWord: DictionaryWord?
-    @State var myWodData: WodData?
+    @State var generator = WodServer()
     
     var body: some View {
         NavigationStack {
             Form {
-                Text("\(myWord)")
                 TextField(session.wod.word, text: $session.wod.word, prompt: Text("Add a Word of the day"))
-                TextField(session.wod.definition, text: $session.wod.definition, prompt: Text("Add a definition"))
-                TextField(session.wod.example, text: $session.wod.example, prompt: Text("Add an example"))
+                TextField(session.wod.definition, text: $session.wod.definition, prompt: Text("Add a definition"), axis: .vertical)
+                TextField(session.wod.example, text: $session.wod.example, prompt: Text("Add an example"), axis: .vertical)
                 Button("Feeling Lucky?") {
-                    let word = apiHandler.getRandomWord()
-                    Task {
-                        myDictionaryWord = try await apiHandler.getDictionaryWordData(word: word)
-                    }
-                    let wd = WodData(word: myDictionaryWord?.word ?? "", definition: myDictionaryWord?.meanings[0].definitions[0].definition ?? "", example: myDictionaryWord?.meanings[0].definitions[0].example ?? "")
-                    session.updateWodFromWodData(wodd: wd)
-                }
-                Button("Search") {
-                    nav.showingWordSearch.toggle()
-                }
-                .sheet(isPresented: $nav.showingFeelingLucky) {
-                    FeelingLuckyView(session: session, nav: nav)
+                    // TODO: This would ideally generate words with an API call from https://api.dictionaryapi.dev/api/v2/entries/en/<word>
+                    let results = generator.getRandomWord()
+                    session.updateWod(wod: results.word, def: results.definition, ex: results.example)
                 }
                 
                 Section("Current Speakers: ") {

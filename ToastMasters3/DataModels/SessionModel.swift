@@ -11,7 +11,7 @@ import Foundation
     let id: UUID = UUID()
     @Published var sessionDate = Date.now
     @Published var speakers: [Speaker] = []
-    @Published var wod: WOD = WOD()
+    @Published var wod: WodData = WodData(word: "", definition: "", example: "")
     
     func addSpeaker(name n: String) -> (Bool, String, String) {
         for speaker in speakers {
@@ -32,12 +32,6 @@ import Foundation
         wod.example = e
     }
     
-    func updateWodFromWodData(wodd wd: WodData) {
-        wod.word = wd.word
-        wod.definition = wd.definition
-        wod.example = wd.example
-    }
-    
     func addDummySpeakers() {
         for i in 0...10 {
             speakers.append(Speaker(name: "S\(i)"))
@@ -50,10 +44,4 @@ import Foundation
         wod.example = "Test Example"
     }
     
-}
-
-struct WOD {
-    var word: String = ""
-    var definition: String = ""
-    var example: String = ""
 }

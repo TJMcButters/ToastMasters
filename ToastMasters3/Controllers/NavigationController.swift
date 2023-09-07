@@ -11,11 +11,9 @@ final class NavCon: ObservableObject {
     
     // Add views
     @Published var showingAddSpeakerView: Bool = false
-    @Published var showingAddWodView: Bool = false
     
-    // FeelingLucky & Word Search Views
+    // FeelingLucky
     @Published var showingFeelingLucky: Bool = false
-    @Published var showingWordSearch: Bool = false
     
     // Summary views
     @Published var showingAhCounterSummary: Bool = false

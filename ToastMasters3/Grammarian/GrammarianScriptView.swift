@@ -24,11 +24,11 @@ I’ll take note of any misuses of the English language as well as any outstandi
 
 As Grammarian, it is also my duty to introduce the Word of the Day.
 
-For today’s meeting, the Word is \(session.wod.word), which means
+For today’s meeting, the Word is \(session.wod.word), which means:
 
 \(session.wod.definition)
 
-An example of using the word is: \(session.wod.example)
+An example of using the word is: \"\(session.wod.example)\"
 
 Each speaker is encouraged to use the Word of the Day.
 
