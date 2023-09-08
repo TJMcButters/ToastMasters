@@ -15,8 +15,10 @@
 		18054AD32A9E1ED50039B582 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AD22A9E1ED50039B582 /* NavigationController.swift */; };
 		18054AD52A9ECF400039B582 /* AhCounterSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AD42A9ECF400039B582 /* AhCounterSummaryView.swift */; };
 		18054AD72AA0585F0039B582 /* CustomViewInserts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18054AD62AA0585F0039B582 /* CustomViewInserts.swift */; };
+		181FA2B22AAAC71A0083080C /* AddWodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FA2B12AAAC71A0083080C /* AddWodView.swift */; };
 		184D49562AA954FB000861B7 /* WODGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D49552AA954FB000861B7 /* WODGenerator.swift */; };
 		184D49582AA95537000861B7 /* Words.json in Resources */ = {isa = PBXBuildFile; fileRef = 184D49572AA95537000861B7 /* Words.json */; };
+		184D495A2AA9690A000861B7 /* SingleEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D49592AA9690A000861B7 /* SingleEditView.swift */; };
 		1881564C2AA1558000DC464B /* GrammarianStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881564B2AA1558000DC464B /* GrammarianStartView.swift */; };
 		1881564E2AA15D5400DC464B /* GrammarianSpeakerEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881564D2AA15D5400DC464B /* GrammarianSpeakerEditView.swift */; };
 		188156522AA1775700DC464B /* AhCounter.txt in Resources */ = {isa = PBXBuildFile; fileRef = 188156512AA1775700DC464B /* AhCounter.txt */; };
@@ -40,8 +42,10 @@
 		18054AD22A9E1ED50039B582 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		18054AD42A9ECF400039B582 /* AhCounterSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhCounterSummaryView.swift; sourceTree = "<group>"; };
 		18054AD62AA0585F0039B582 /* CustomViewInserts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewInserts.swift; sourceTree = "<group>"; };
+		181FA2B12AAAC71A0083080C /* AddWodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWodView.swift; sourceTree = "<group>"; };
 		184D49552AA954FB000861B7 /* WODGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WODGenerator.swift; sourceTree = "<group>"; };
 		184D49572AA95537000861B7 /* Words.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Words.json; sourceTree = "<group>"; };
+		184D49592AA9690A000861B7 /* SingleEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEditView.swift; sourceTree = "<group>"; };
 		1881564B2AA1558000DC464B /* GrammarianStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarianStartView.swift; sourceTree = "<group>"; };
 		1881564D2AA15D5400DC464B /* GrammarianSpeakerEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarianSpeakerEditView.swift; sourceTree = "<group>"; };
 		188156512AA1775700DC464B /* AhCounter.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AhCounter.txt; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 			children = (
 				18054ACD2A9D71BB0039B582 /* AddSpeakerView.swift */,
 				18054AD62AA0585F0039B582 /* CustomViewInserts.swift */,
+				184D49592AA9690A000861B7 /* SingleEditView.swift */,
+				181FA2B12AAAC71A0083080C /* AddWodView.swift */,
 			);
 			path = "General Views";
 			sourceTree = "<group>";
@@ -254,6 +260,8 @@
 				18BCF8DA2AA2FCE60044560A /* GrammarianSummaryView.swift in Sources */,
 				188156582AA1792900DC464B /* AhCounterScriptView.swift in Sources */,
 				184D49562AA954FB000861B7 /* WODGenerator.swift in Sources */,
+				184D495A2AA9690A000861B7 /* SingleEditView.swift in Sources */,
+				181FA2B22AAAC71A0083080C /* AddWodView.swift in Sources */,
 				1881564E2AA15D5400DC464B /* GrammarianSpeakerEditView.swift in Sources */,
 				1881565C2AA17E9700DC464B /* GrammarianScriptView.swift in Sources */,
 				1881565A2AA179A800DC464B /* ScriptLoader.swift in Sources */,

@@ -10,7 +10,9 @@ import Foundation
 @MainActor final class Session: Identifiable, ObservableObject {
     let id: UUID = UUID()
     @Published var sessionDate = Date.now
-    @Published var speakers: [Speaker] = []
+    @Published var speakers: [Speaker] = [Speaker(name: "")]
+    @Published var currentSpeaker: Speaker = Speaker(name: "")
+    var placeholderRemoved: Bool = false
     @Published var wod: WodData = WodData(word: "", definition: "", example: "")
     
     func addSpeaker(name n: String) -> (Bool, String, String) {
@@ -22,7 +24,20 @@ import Foundation
         if n.isEmpty {
             return (true, "Empty Name", "You must provide a name for the Speaker")
         }
-        speakers.append(Speaker(name: n))
+        else if !placeholderRemoved {
+            for i in 0..<speakers.count {
+                if speakers[i].name == "" {
+                    print("Removed")
+                    speakers.remove(at: i)
+                    placeholderRemoved = true
+                }
+            }
+        }
+        let newSpeaker = Speaker(name: n)
+        speakers.append(newSpeaker)
+        if currentSpeaker.name == "" {
+            setCurrentSpeaker(speaker: newSpeaker)
+        }
         return (false, "", "")
     }
     
@@ -32,9 +47,18 @@ import Foundation
         wod.example = e
     }
     
+    func updateWodWithData(wodData wd: WodData) {
+        wod = wd
+    }
+    
+    func setCurrentSpeaker(speaker s: Speaker) {
+        currentSpeaker = s
+    }
+    
     func addDummySpeakers() {
         for i in 0...10 {
-            speakers.append(Speaker(name: "S\(i)"))
+            let name = "S\(i)"
+            let _ = addSpeaker(name: name)
         }
     }
     

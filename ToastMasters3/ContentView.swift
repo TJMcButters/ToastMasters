@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @StateObject var session = Session()
     @StateObject var nav = NavCon()
+    @State var showingSingleEditAlert: Bool = false
     
     var body: some View {
         VStack {
@@ -39,7 +40,18 @@ struct ContentView: View {
                         } label: {
                             Text("Timer")
                         }
+
+                        NavigationLink {
+                            if session.speakers.count > 0 && session.currentSpeaker.name != "" {
+                                SingleEditView(session: session, nav: nav)
+                            } else {
+                                AddSpeakerView(session: session)
+                            }
+                        } label: {
+                            Text("Single Edit")
+                        }
                     }
+                    
                     Section("Previous Sessions: ") {
                         Text("Placeholder Text")
                         Text("More placeholder text")
